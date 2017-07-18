@@ -7,7 +7,8 @@ $(document).ready(function() {
 			var d = new Date(latest_activity * 1000);
 			$("#lastKnownActivity").html(d.getHours() + ":" + d.getMinutes() + " " + d.toDateString());
 		});
-		
+		var f = new Date();
+		$("#lastRefresh").html(f.getHours() + ":" + f.getMinutes() + " " + f.toDateString());
 		$("#poolTableStatus").html("Available/Unavailable");
 		$("#approxComplTime").html("XXX Minutes");
     });
