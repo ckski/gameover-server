@@ -32,7 +32,8 @@ defmodule GameoverServer.Server do
         {"/tables/:table_id", __MODULE__.TablesEndpoint, %{}},
         {"/tables", __MODULE__.TablesEndpoint, %{}},
         {"/tables/:table_id/sensors", __MODULE__.SensorsEndpoint, %{}},
-        {"/", :cowboy_static, {:priv_file, :gameover_server, "assets/index.html"}}
+        {"/", :cowboy_static, {:priv_file, :gameover_server, "assets/index.html"}},
+        {"/[...]", :cowboy_static, {:priv_dir, :gameover_server, "assets"}}
       ]},
     ])
 
