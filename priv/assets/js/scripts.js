@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $("#refreshButton").click(function() {
-		//server ip: 10.161.110.138
 		let server_address = window.location.origin;
 		$.get( server_address + "/tables", function( data ) {
 			console.log(data);

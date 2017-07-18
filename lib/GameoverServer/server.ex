@@ -97,6 +97,8 @@ defmodule GameoverServer.Server do
     def init(req, state) do
       table_id = req.bindings[:table_id]
 
+      # Logger.debug("sensors post request: #{inspect req}")
+
       # auth_token = req.headers["authorization"]
       req = cond do
         # not req.header
