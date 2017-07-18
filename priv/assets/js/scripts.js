@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $("#refreshButton").click(function() {
 		//server ip: 10.161.110.138
-		$.get( "http://10.161.110.138/tables", function( data ) {
+		let server_address = window.location.origin;
+		$.get( server_address + "/tables", function( data ) {
 			console.log(data);
 			let latest_activity = data.status.latest_activity;
 			var d = new Date(latest_activity);
